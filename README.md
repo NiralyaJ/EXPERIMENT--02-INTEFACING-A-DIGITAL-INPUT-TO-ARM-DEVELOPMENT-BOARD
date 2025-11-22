@@ -74,14 +74,14 @@ int main(void)
         status = HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13);
         if(status == 0)
         {
-            HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_SET);
+            HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
             HAL_Delay(100);
-            HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_RESET);
+            HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
             HAL_Delay(100);
         }
         else
         {
-            HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_RESET);
+            HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
         }
     }
 }
@@ -121,7 +121,7 @@ static void MX_GPIO_Init(void)
     __HAL_RCC_GPIOC_CLK_ENABLE();
     __HAL_RCC_GPIOA_CLK_ENABLE();
 
-    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
 
     GPIO_InitStruct.Pin = GPIO_PIN_13;
     GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
@@ -161,10 +161,6 @@ With Blinbking after prussing the Buttton
 Without Blinking 
 ![WhatsApp Image 2025-09-11 at 13 43 42_40018ca7](https://github.com/user-attachments/assets/e95ad83c-980f-41a1-9a51-8564678ba693)
 
-## layout of the circuit 
- 
-<img width="606" height="569" alt="image" src="https://github.com/user-attachments/assets/d58a3123-83a8-417e-83b3-b6d6fa24d074" />
 
- 
 ## Result :
 Interfacing a digital Input (Pushbutton ) with ARM microcontroller based IOT development is executed and the results are verified.
